@@ -8,8 +8,8 @@ public class RomanNumeralTest {
 
     @Test
     public void singleNumber() {
-        RomanNumeral roman = new RomanNumeral();
-        int result = roman.convert("I");
+       // RomanNumeral roman = new RomanNumeral();
+        int result =  new RomanNumeral().convert("I");
         Assertions.assertEquals(1, result);
     }
 
@@ -23,8 +23,8 @@ public class RomanNumeralTest {
     @Test
     public void numberWithSubtractiveNotation() {
         RomanNumeral roman = new RomanNumeral();
-        int result = roman.convert("IV");
-        Assertions.assertEquals(4, result);
+        int result = roman.convert("C");
+        Assertions.assertEquals(100, result);
     }
 
     @Test
