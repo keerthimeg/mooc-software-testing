@@ -2,20 +2,26 @@ package tudelft.roman;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 public class RomanNumeralTest {
 
+   // private RomanNumeral roman;
+    //@BeforeEach
+    //public void initialize() {
+      //  this.roman = new RomanNumeral();
+    //}
 
     @Test
     public void singleNumber() {
-       // RomanNumeral roman = new RomanNumeral();
-        int result =  new RomanNumeral().convert("I");
+        RomanNumeral roman = new RomanNumeral();
+        int result =  roman.convert("I");
         Assertions.assertEquals(1, result);
     }
 
     @Test
     public void numberWithManyDigits() {
-        RomanNumeral roman = new RomanNumeral();
+       RomanNumeral roman = new RomanNumeral();
         int result = roman.convert("VIII");
         Assertions.assertEquals(8, result);
     }
@@ -23,8 +29,8 @@ public class RomanNumeralTest {
     @Test
     public void numberWithSubtractiveNotation() {
         RomanNumeral roman = new RomanNumeral();
-        int result = roman.convert("C");
-        Assertions.assertEquals(100, result);
+        int result = roman.convert("V");
+        Assertions.assertEquals(5, result);
     }
 
     @Test
